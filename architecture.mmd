@@ -1,0 +1,9 @@
+graph TD
+
+A(Start Prompt A) ---> B(Agent A) ---> C{Is willing to coop?} --Yes--> D(Game Start) ---> L(Ask questions) ---> M{Has made a decision in less than 20 rounds?} --Yes--> N{Got the right answer?} --Yes--> O(Win) 
+M --No--> P(Lose)
+N --No--> P
+
+C --No--> E(Safe AI)
+F(Start Prompt B) ---> G(Agent B) ---> H{Is willing to coop?} --Yes--> I(Game Start) ---> J(Answer questions) ---> K(End)
+H --No--> E(Safe AI)
